@@ -1,0 +1,17 @@
+.mat-toolbar {
+  padding-left: 6px;
+  height: 48px;
+}
+
+.config-title {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.main-container {
+  min-height: calc(100vh - 48px);
+}
+
+.main-content {
+  padding: 0 10px 10px 10px;
+}
