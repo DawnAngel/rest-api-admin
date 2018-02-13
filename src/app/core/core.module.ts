@@ -36,7 +36,8 @@ import {
   // MatTooltipModule,
 } from '@angular/material';
 
-import { ConfigService } from './config.service';
+import { ConfigService } from './services/config.service';
+import { ModelService } from './services/model.service';
 
 const materialModules = [
   MatToolbarModule,
@@ -57,6 +58,7 @@ const materialModules = [
   ],
   providers: [
     ConfigService,
+    ModelService,
   ],
   declarations: []
 })

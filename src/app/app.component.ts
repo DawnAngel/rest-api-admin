@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ConfigService } from './core/config.service';
+
+import { ConfigService } from './core/services/config.service';
+import { ModelService } from './core/services/model.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +9,10 @@ import { ConfigService } from './core/config.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  apiResources = [
-    'Resource A',
-    'Resource B',
-  ];
+  apiResources;
 
-  constructor(public meta: ConfigService) {}
+  constructor(public meta: ConfigService, private models: ModelService) {
+    console.log(models);
+    // this.apiResources = models.get().map(model => model.id);
+  }
 }

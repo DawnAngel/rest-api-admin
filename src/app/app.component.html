@@ -6,10 +6,10 @@
   <h1 routerLink="/" class="config-title">{{meta.cfg.title}}</h1>
 </mat-toolbar>
 
-<mat-sidenav-container class="example-sidenav-container">
-  <mat-sidenav #sidenav fullscreen mode="side" role="navigation">
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" role="navigation">
     <mat-nav-list>
-      <a mat-list-item [routerLink]="resource" *ngFor="let resource of apiResources">{{resource}}</a>
+      <a mat-list-item *ngFor="let resource of apiResources" [routerLink]="resource">{{resource}}</a>
     </mat-nav-list>
   </mat-sidenav>
 

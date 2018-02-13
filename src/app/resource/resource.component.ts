@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-resource',
-  template: '<h2>&larr; Please select a resource.</h2>',
+  templateUrl: './resource.component.html',
 })
 export class ResourceComponent {}

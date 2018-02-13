@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Config, IConfig } from '@model/config';
+import { IConfig } from 'model/config.interface';
+import { Config } from 'model/config';
 
 @Injectable()
 export class ConfigService {
@@ -9,5 +10,4 @@ export class ConfigService {
   constructor() {
     this.cfg = new Config();
   }
-
 }
