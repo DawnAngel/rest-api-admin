@@ -1,14 +1,21 @@
 import { Model } from '@model/model';
-import { userModel } from '@model/user.model';
 
 export class ModelCollection {
-  constructor(private collection: Model[] = []) {}
+  private collection: Map<string, Model> = new Map();
 
-  get() {
-    return this.collection;
+  add(model: Model) {
+    this.collection.set(model.id, model);
+  }
+
+  get(id: string): Model {
+    return this.collection.get(id);
+  }
+
+  getAll(): Iterable<Model> {
+    return this.collection.values();
+  }
+
+  getIds(): Iterable<string> {
+    return this.collection.keys();
   }
 }
-
-export const models = new ModelCollection([
-  userModel,
-]);

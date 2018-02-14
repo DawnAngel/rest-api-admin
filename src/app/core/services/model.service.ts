@@ -1,17 +1,29 @@
 import { Injectable } from '@angular/core';
 
-import { Model } from '@model/model';
-import { ModelCollection, models } from '@model/model.collection';
+import { Model, ModelCollection, models } from '@model/index';
 
 @Injectable()
 export class ModelService {
-  models: ModelCollection;
+  models: ModelCollection = models;
 
-  constructor() {
-    this.models = models;
+  get(id: string): Model {
+    return this.models.get(id);
   }
-  get(): Model[] {
-    console.log(this.models);
-    return this.models.get();
+
+  getAll(): Model[] {
+    return Array.from(this.models.getAll());
   }
+
+  getIds(): string[] {
+    return Array.from(this.models.getIds());
+  }
+
+  iterAll(): Iterable<Model> {
+    return this.models.getAll();
+  }
+
+  iterIds(): Iterable<string> {
+    return this.models.getIds();
+  }
+
 }

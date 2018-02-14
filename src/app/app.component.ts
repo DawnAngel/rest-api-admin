@@ -12,7 +12,6 @@ export class AppComponent {
   apiResources;
 
   constructor(public meta: ConfigService, private models: ModelService) {
-    console.log(models);
-    // this.apiResources = models.get().map(model => model.id);
+    this.apiResources = models.getIds();
   }
 }
