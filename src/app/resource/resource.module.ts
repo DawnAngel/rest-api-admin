@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { ListComponent } from './list/list.component';
 import { ResourceComponent } from './resource.component';
+import { MaterialDesignModule } from '@app/shared/md/md.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    MaterialDesignModule,
   ],
-  declarations: [ListComponent, ResourceComponent]
+  declarations: [ListComponent, ResourceComponent],
 })
 export class ResourceModule { }

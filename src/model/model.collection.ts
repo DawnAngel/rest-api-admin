@@ -11,6 +11,10 @@ export class ModelCollection {
     return this.collection.get(id);
   }
 
+  has(id: string): boolean {
+    return this.collection.has(id);
+  }
+
   getAll(): Iterable<Model> {
     return this.collection.values();
   }
